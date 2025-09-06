@@ -7,11 +7,11 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-    - host: "dmain.com"
+    - host:"dmain.com"
       http:
         paths:
-          - pathType: Prefix
-            path: "/test"
+          - pathType:Prefix
+            path: "/tests"
             backend:
               service:
                 name: reddit-clone-service
@@ -20,8 +20,8 @@ spec:
     - host: "*.dmain.com"
       http:
         paths:
-          - pathType: Prefix
-            path: "/test"
+          - pathType:Prefix
+            path: "/tests"
             backend:
               service:
                 name: reddit-clone-service
